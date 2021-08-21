@@ -31,7 +31,7 @@ function sumMix(arr) {
 
   return result
 	
-	// 풀이4
+  // 풀이4
   let result = 0
 
   for (let i = 0; i < arr.length; i++) {
