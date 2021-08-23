@@ -11,9 +11,9 @@ function sumWithoutMaxAndMin(arr) {
   let sum = 0
 
   arr.filter(i => i > min && i < max).forEach(item => sum += item);
+
   return sum
 
-  
   // 풀이2
   let result = 0
   const sortArr = arr.sort((a, b) => a - b) // [5, 6, 7, 8]
