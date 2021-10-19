@@ -5,15 +5,14 @@ function removeNExclamation(str, n) {
 
   // 풀이1
   let result = ''
-  let count = n
+  let count = 0
 
-  for (let i = 0; i < str.length; i++) {
-    if (str[i] === '!') {
-      if (count === 0) {
-        result += str[i]
+  for (let i = 0; i <= str.length - 1; i++) {
+    if (count < n) {
+      if (str[i] === '!') {
+        count++
       } else {
-        result += ''
-        count --
+        result += str[i]
       }
     } else {
       result += str[i]
@@ -21,6 +20,15 @@ function removeNExclamation(str, n) {
   }
 
   return result
+
+  // 풀이2
+  let test = str
+
+  for (let i = 0; i < n; i++) {
+    test = test.replace(/[!]/, '')
+  }
+
+  return test
 }
 
 removeNExclamation('!!abc!!', 1); // !abc!!
