@@ -21,6 +21,17 @@ function noEndingZeros(n) {
   }
 
   return result.join('')
+
+  // 풀이2
+  let str = n.toString()
+
+  if (n === 0) return 0
+  
+  while (str.lastIndexOf('0') === str.length - 1) {
+    str = str.substring(0, str.length - 1)
+  }
+
+  return str
 }
 
 noEndingZeros(0); // 0
